@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="KTControlModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Kt_Subscriber">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="OID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Gesperrt" Type="bit" />
+          <Property Name="Passiv" Type="bit" />
+          <Property Name="PassivDatum" Type="datetime" />
+          <Property Name="PassivBenutzerOid" Type="int" />
+          <Property Name="DbConnectionString" Type="nvarchar" MaxLength="250" />
+          <Property Name="Angelegt" Type="int" />
+          <Property Name="Erstellungsdatum" Type="datetime" />
+          <Property Name="Bearbeiter" Type="int" />
+          <Property Name="Bearbeitungsdatum" Type="datetime" />
+          <Property Name="Id" Type="nvarchar" MaxLength="100" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="Status" Type="nvarchar" MaxLength="250" />
+          <Property Name="Bounce" Type="nvarchar" MaxLength="250" />
+          <Property Name="ListId" Type="nvarchar" MaxLength="100" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Ip" Type="nvarchar" MaxLength="250" />
+          <Property Name="Unsubscription" Type="nvarchar" MaxLength="250" />
+          <Property Name="Unsubscription_Ip" Type="nvarchar" MaxLength="250" />
+          <Property Name="Optin" Type="datetime" />
+          <Property Name="Optin_Ip" Type="nvarchar" MaxLength="250" />
+          <Property Name="Referrer" Type="nvarchar(max)" />
+          <Property Name="Sms_Phone" Type="nvarchar" MaxLength="250" />
+          <Property Name="Sms_Status" Type="nvarchar" MaxLength="250" />
+          <Property Name="Sms_Bounce" Type="nvarchar" MaxLength="250" />
+          <Property Name="Sms_Date" Type="datetime" />
+          <Property Name="Sms_Unsubscription" Type="nvarchar" MaxLength="250" />
+          <Property Name="Sms_Referrer" Type="nvarchar" MaxLength="250" />
+          <Property Name="FieldFirstName" Type="nvarchar" MaxLength="250" />
+          <Property Name="FieldLastName" Type="nvarchar" MaxLength="250" />
+          <Property Name="FieldCompanyName" Type="nvarchar" MaxLength="250" />
+          <Property Name="FieldStreet1" Type="nvarchar" MaxLength="250" />
+          <Property Name="FieldStreet2" Type="nvarchar" MaxLength="250" />
+          <Property Name="FieldCity" Type="nvarchar" MaxLength="250" />
+          <Property Name="FieldState" Type="nvarchar" MaxLength="250" />
+          <Property Name="FieldZip" Type="nvarchar" MaxLength="250" />
+          <Property Name="FieldCountry" Type="nvarchar" MaxLength="250" />
+          <Property Name="FieldPrivatePhone" Type="nvarchar" MaxLength="250" />
+          <Property Name="FieldMobilePhone" Type="nvarchar" MaxLength="250" />
+          <Property Name="FieldPhone" Type="nvarchar" MaxLength="250" />
+          <Property Name="FieldFax" Type="nvarchar" MaxLength="250" />
+          <Property Name="FieldWebsite" Type="nvarchar" MaxLength="250" />
+          <Property Name="FieldBirthday" Type="nvarchar" MaxLength="250" />
+          <Property Name="FieldLeadValue" Type="nvarchar" MaxLength="250" />
+          <Property Name="KlickKampagnenName" Type="nvarchar" MaxLength="100" />
+          <Property Name="OptimisticLockField" Type="int" />
+          <Property Name="GCRecord" Type="int" />
+        </EntityType>
+        <EntityContainer Name="KTControlModelStoreContainer">
+          <EntitySet Name="Kt_Subscriber" EntityType="Self.Kt_Subscriber" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KTControlModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Kt_Subscriber">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="OID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Gesperrt" Type="Boolean" />
+          <Property Name="Passiv" Type="Boolean" />
+          <Property Name="PassivDatum" Type="DateTime" Precision="3" />
+          <Property Name="PassivBenutzerOid" Type="Int32" />
+          <Property Name="DbConnectionString" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Angelegt" Type="Int32" />
+          <Property Name="Erstellungsdatum" Type="DateTime" Precision="3" />
+          <Property Name="Bearbeiter" Type="Int32" />
+          <Property Name="Bearbeitungsdatum" Type="DateTime" Precision="3" />
+          <Property Name="Id" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Bounce" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ListId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="Ip" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Unsubscription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Unsubscription_Ip" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Optin" Type="DateTime" Precision="3" />
+          <Property Name="Optin_Ip" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Referrer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Sms_Phone" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Sms_Status" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Sms_Bounce" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Sms_Date" Type="DateTime" Precision="3" />
+          <Property Name="Sms_Unsubscription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Sms_Referrer" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FieldFirstName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FieldLastName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FieldCompanyName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FieldStreet1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FieldStreet2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FieldCity" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FieldState" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FieldZip" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FieldCountry" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FieldPrivatePhone" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FieldMobilePhone" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FieldPhone" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FieldFax" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FieldWebsite" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FieldBirthday" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FieldLeadValue" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="KlickKampagnenName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="OptimisticLockField" Type="Int32" />
+          <Property Name="GCRecord" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="KTControlEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Kt_Subscriber" EntityType="Self.Kt_Subscriber" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="KTControlModelStoreContainer" CdmEntityContainer="KTControlEntities">
+          <EntitySetMapping Name="Kt_Subscriber">
+            <EntityTypeMapping TypeName="KTControlModel.Kt_Subscriber">
+              <MappingFragment StoreEntitySet="Kt_Subscriber">
+                <ScalarProperty Name="OID" ColumnName="OID" />
+                <ScalarProperty Name="Gesperrt" ColumnName="Gesperrt" />
+                <ScalarProperty Name="Passiv" ColumnName="Passiv" />
+                <ScalarProperty Name="PassivDatum" ColumnName="PassivDatum" />
+                <ScalarProperty Name="PassivBenutzerOid" ColumnName="PassivBenutzerOid" />
+                <ScalarProperty Name="DbConnectionString" ColumnName="DbConnectionString" />
+                <ScalarProperty Name="Angelegt" ColumnName="Angelegt" />
+                <ScalarProperty Name="Erstellungsdatum" ColumnName="Erstellungsdatum" />
+                <ScalarProperty Name="Bearbeiter" ColumnName="Bearbeiter" />
+                <ScalarProperty Name="Bearbeitungsdatum" ColumnName="Bearbeitungsdatum" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Bounce" ColumnName="Bounce" />
+                <ScalarProperty Name="ListId" ColumnName="ListId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Ip" ColumnName="Ip" />
+                <ScalarProperty Name="Unsubscription" ColumnName="Unsubscription" />
+                <ScalarProperty Name="Unsubscription_Ip" ColumnName="Unsubscription_Ip" />
+                <ScalarProperty Name="Optin" ColumnName="Optin" />
+                <ScalarProperty Name="Optin_Ip" ColumnName="Optin_Ip" />
+                <ScalarProperty Name="Referrer" ColumnName="Referrer" />
+                <ScalarProperty Name="Sms_Phone" ColumnName="Sms_Phone" />
+                <ScalarProperty Name="Sms_Status" ColumnName="Sms_Status" />
+                <ScalarProperty Name="Sms_Bounce" ColumnName="Sms_Bounce" />
+                <ScalarProperty Name="Sms_Date" ColumnName="Sms_Date" />
+                <ScalarProperty Name="Sms_Unsubscription" ColumnName="Sms_Unsubscription" />
+                <ScalarProperty Name="Sms_Referrer" ColumnName="Sms_Referrer" />
+                <ScalarProperty Name="FieldFirstName" ColumnName="FieldFirstName" />
+                <ScalarProperty Name="FieldLastName" ColumnName="FieldLastName" />
+                <ScalarProperty Name="FieldCompanyName" ColumnName="FieldCompanyName" />
+                <ScalarProperty Name="FieldStreet1" ColumnName="FieldStreet1" />
+                <ScalarProperty Name="FieldStreet2" ColumnName="FieldStreet2" />
+                <ScalarProperty Name="FieldCity" ColumnName="FieldCity" />
+                <ScalarProperty Name="FieldState" ColumnName="FieldState" />
+                <ScalarProperty Name="FieldZip" ColumnName="FieldZip" />
+                <ScalarProperty Name="FieldCountry" ColumnName="FieldCountry" />
+                <ScalarProperty Name="FieldPrivatePhone" ColumnName="FieldPrivatePhone" />
+                <ScalarProperty Name="FieldMobilePhone" ColumnName="FieldMobilePhone" />
+                <ScalarProperty Name="FieldPhone" ColumnName="FieldPhone" />
+                <ScalarProperty Name="FieldFax" ColumnName="FieldFax" />
+                <ScalarProperty Name="FieldWebsite" ColumnName="FieldWebsite" />
+                <ScalarProperty Name="FieldBirthday" ColumnName="FieldBirthday" />
+                <ScalarProperty Name="FieldLeadValue" ColumnName="FieldLeadValue" />
+                <ScalarProperty Name="KlickKampagnenName" ColumnName="KlickKampagnenName" />
+                <ScalarProperty Name="OptimisticLockField" ColumnName="OptimisticLockField" />
+                <ScalarProperty Name="GCRecord" ColumnName="GCRecord" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
