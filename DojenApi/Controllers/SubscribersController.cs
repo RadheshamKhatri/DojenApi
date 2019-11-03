@@ -12,7 +12,7 @@ namespace DojenApi.Controllers
     public class SubscribersController : ApiController
     {
         private KTControlEntities _db;
-       
+        string Abc = string.Empty;
         public SubscribersController()
         {
             _db = new KTControlEntities();
